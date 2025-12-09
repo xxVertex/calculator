@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calculator App</title>
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-950 text-gray-100 min-h-screen flex items-center justify-center">
+
+  <div class="bg-gray-900 border border-yellow-500/30 rounded-xl p-6 w-full max-w-sm shadow-2xl">
+
+    <!-- Display -->
+    <div id="display"
+         class="bg-black text-right text-4xl font-mono p-4 rounded-lg border border-yellow-500/30 text-yellow-400 overflow-x-auto">
+      0
+    </div>
+
+    <!-- Buttons -->
+    <div class="grid grid-cols-4 gap-3 mt-6">
+
+      <!-- Row 1 -->
+      <button class="btn col-span-2 bg-red-600 hover:bg-red-500" data-action="clear">AC</button>
+      <button class="btn bg-yellow-600 hover:bg-yellow-500" data-action="delete">⌫</button>
+      <button class="btn bg-yellow-600 hover:bg-yellow-500" data-value="/">÷</button>
+
+      <!-- Row 2 -->
+      <button class="btn" data-value="7">7</button>
+      <button class="btn" data-value="8">8</button>
+      <button class="btn" data-value="9">9</button>
+      <button class="btn bg-yellow-600 hover:bg-yellow-500" data-value="*">×</button>
+
+      <!-- Row 3 -->
+      <button class="btn" data-value="4">4</button>
+      <button class="btn" data-value="5">5</button>
+      <button class="btn" data-value="6">6</button>
+      <button class="btn bg-yellow-600 hover:bg-yellow-500" data-value="-">−</button>
+
+      <!-- Row 4 -->
+      <button class="btn" data-value="1">1</button>
+      <button class="btn" data-value="2">2</button>
+      <button class="btn" data-value="3">3</button>
+      <button class="btn bg-yellow-600 hover:bg-yellow-500" data-value="+">+</button>
+
+      <!-- Row 5 -->
+      <button class="btn col-span-2" data-value="0">0</button>
+      <button class="btn" data-value=".">.</button>
+      <button class="btn bg-green-600 hover:bg-green-500" data-action="equals">=</button>
+
+    </div>
+  </div>
+
+  <!-- Script -->
+  <script src="script.js"></script>
+</body>
+</html>
